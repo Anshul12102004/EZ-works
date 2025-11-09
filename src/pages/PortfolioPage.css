@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Film Strip Container */
+
+
+.filmstrip-perforations.bottom {
+  bottom: 8px;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+.carousel-track {
+  display: flex;
+
+}
+
+/* Decorative Pattern */
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .reel-content {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .reel-header h1 {
+    font-size: 36px;
+  }
+
+  .filmstrip-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .reel-content {
+    padding: 30px 15px;
+    gap: 30px;
+  }
+
+  .film-camera {
+    width: 100px;
+    height: 150px;
+  }
+
+  .reel-header h1 {
+    font-size: 28px;
+  }
+
+  .reel-header p {
+    font-size: 14px;
+  }
+
+  .carousel-slide {
+    min-height: 300px;
+  }
+
+  .play-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .carousel-btn {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .reel-content {
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .film-camera {
+    width: 80px;
+    height: 120px;
+  }
+
+  .reel-header h1 {
+    font-size: 24px;
+  }
+
+  .reel-header p {
+    font-size: 12px;
+  }
+
+  .carousel-slide {
+    min-height: 250px;
+  }
+
+  .filmstrip-perforations {
+    height: 12px;
+  }
+
+  .carousel-btn {
+    font-size: 20px;
+    gap: 10px;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+}

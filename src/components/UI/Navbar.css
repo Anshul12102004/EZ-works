@@ -1,0 +1,115 @@
+/* ✅ Header Wrapper */
+.navbar {
+  background: transparent;
+  position:relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+/* ✅ Grid layout to match your HTML structure */
+.navbar-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ✅ Logo styling */
+.logo img.vlogo {
+  height: 40px;
+  width: auto;
+}
+
+/* ✅ Nav Section */
+.nav-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* ✅ Nav links inside */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.6s ease, opacity 0.4s ease;
+}
+
+/* ✅ Expanded state for animation */
+.navbar.expanded .nav-links {
+  max-width: 700px;
+  opacity: 1;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  font-family: 'Instrument Sans';
+  padding: 15px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  transition: color 0s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #ff7b2c;
+  border-radius: 50%;
+  color: white;
+}
+
+/* ✅ Toggle Button */
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.toggle-icon {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.4s ease;
+}
+
+.navbar.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .navbar-grid {
+    grid-template-columns: auto auto;
+    align-items: start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 0;
+  }
+
+  .navbar.expanded .nav-links {
+    max-width: 100%;
+  }
+}
